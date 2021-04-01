@@ -30,6 +30,8 @@ namespace music
         {
 
             services.AddControllers();
+            services.AddMvc().AddXmlSerializerFormatters();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "music", Version = "v1" });
@@ -47,7 +49,7 @@ namespace music
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "music v1"));
             }
 
-            dbContext.Database.EnsureCreated();
+                dbContext.Database.EnsureCreated();
 
             app.UseHttpsRedirection();
 

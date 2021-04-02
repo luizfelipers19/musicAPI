@@ -30,7 +30,7 @@ namespace music
         {
 
             services.AddControllers();
-            services.AddMvc().AddXmlSerializerFormatters();
+            services.AddMvc().AddXmlSerializerFormatters(); 
 
             services.AddSwaggerGen(c =>
             {
@@ -49,7 +49,7 @@ namespace music
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "music v1"));
             }
 
-                dbContext.Database.EnsureCreated();
+               // dbContext.Database.EnsureCreated(); => removed this line because we are now using Migrations
 
             app.UseHttpsRedirection();
 

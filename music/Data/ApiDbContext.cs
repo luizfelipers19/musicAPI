@@ -15,5 +15,25 @@ namespace music.Data
         }
 
         public DbSet<Song> Songs { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Song>().HasData(
+                new Song
+                {
+                    Id = 1,
+                    Title = "Eye of the tiger",
+                    Language = "English",
+                    Duration = "3:30"
+                },
+                new Song
+                {
+                    Id = 2,
+                    Title = "Despacito",
+                    Language = "Español",
+                    Duration = "3:23"
+                }
+                );
+        }
     }
 }

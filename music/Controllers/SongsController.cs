@@ -70,6 +70,7 @@ namespace music.Controllers
             {
                 musica.Title = song.Title;
                             musica.Language = song.Language;
+                musica.Duration = song.Duration;
                           await  _dbContext.SaveChangesAsync();
                             return Ok("Registro atualizado com sucesso");
             }

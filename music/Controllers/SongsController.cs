@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using music.Data;
+using music.Helpers;
 using music.Models;
 using System;
 using System.Collections.Generic;
@@ -68,24 +69,27 @@ namespace music.Controllers
         //}
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Song song)
+        public async Task<IActionResult> Post([FromForm] Song song)
         {
             //string connectionString = @"DefaultEndpointsProtocol=https;AccountName=apimusicsa;AccountKey=2XqcVvo+cjfiN+A9+2GeITIaqDydhN3WLUU/wgnCUnAhvf6yW5zDZgppub1OnUN4PswQa2cguzoaoqVeq8hUVQ==;EndpointSuffix=core.windows.net";
             //string containerName = "albumcover";
 
-           
+
             //BlobContainerClient blobContainerClient = new BlobContainerClient(connectionString, containerName);
-            
+
             //BlobClient blobClient = blobContainerClient.GetBlobClient(song.Image.FileName);
-            
+
             //var memoryStream = new MemoryStream();
-            
+
             //await song.Image.CopyToAsync(memoryStream);
-            
+
             //memoryStream.Position = 0;
-            
+
             //await blobClient.UploadAsync(memoryStream);
-            
+
+           var imageUrl = await FileHelper.UploadImage(song.Image);
+
+            song.ImageUrl = imageUrl;
             await _dbContext.Songs.AddAsync(song);
             
             await _dbContext.SaveChangesAsync();

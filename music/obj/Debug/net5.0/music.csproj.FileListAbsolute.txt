@@ -64,3 +64,6 @@ C:\Users\Windows\Desktop\Estudo\APIs\music\music\music\bin\Debug\net5.0\Azure.St
 C:\Users\Windows\Desktop\Estudo\APIs\music\music\music\bin\Debug\net5.0\Azure.Storage.Common.dll
 C:\Users\Windows\Desktop\Estudo\APIs\music\music\music\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Windows\Desktop\Estudo\APIs\music\music\music\bin\Debug\net5.0\System.Memory.Data.dll
+C:\Users\Windows\Desktop\Estudo\APIs\music\music\music\bin\Debug\net5.0\Microsoft.Azure.KeyVault.Core.dll
+C:\Users\Windows\Desktop\Estudo\APIs\music\music\music\bin\Debug\net5.0\Microsoft.Azure.Storage.Blob.dll
+C:\Users\Windows\Desktop\Estudo\APIs\music\music\music\bin\Debug\net5.0\Microsoft.Azure.Storage.Common.dll

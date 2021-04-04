@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace music.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class RemovedAudioFile : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -54,7 +54,7 @@ namespace music.Migrations
                     UploadedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IsFeatured = table.Column<bool>(type: "bit", nullable: false),
                     ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    AudioUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SongUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ArtistId = table.Column<int>(type: "int", nullable: false),
                     AlbumId = table.Column<int>(type: "int", nullable: true)
                 },

@@ -76,9 +76,6 @@ namespace music.Migrations
                     b.Property<int>("ArtistId")
                         .HasColumnType("int");
 
-                    b.Property<string>("AudioUrl")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Duration")
                         .HasColumnType("nvarchar(max)");
 
@@ -87,6 +84,9 @@ namespace music.Migrations
 
                     b.Property<bool>("IsFeatured")
                         .HasColumnType("bit");
+
+                    b.Property<string>("SongUrl")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");

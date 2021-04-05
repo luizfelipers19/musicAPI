@@ -76,6 +76,21 @@ namespace music.Controllers
             return Ok(songs);
         }
 
+        // GET api/<SongsController>/5
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id)
+        {
+            var musica = await _dbContext.Songs.FindAsync(id);
+            //return musica;
+            if (musica == null)
+            {
+                return NotFound("Nenhum registro foi encontrado com esse ID");
+            }
+            return Ok(musica);
+
+        }
+
+
 
         [HttpGet("[action]")]
         public async Task<IActionResult> FeaturedSongs()
@@ -126,6 +141,13 @@ namespace music.Controllers
                                    AvailableAt = song.SongUrl
                                }).Take(10).ToListAsync();
             return Ok(songs);
+        }
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> SongDetails(int songId)
+        {
+            var songDetails = await _dbContext.Songs.Where(s => s.Id == songId).ToListAsync();
+            return Ok(songDetails);
         }
 
     }

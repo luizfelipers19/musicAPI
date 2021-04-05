@@ -3,7 +3,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/luizfelipers19/musicAPI/">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    ![music-954-675557](https://user-images.githubusercontent.com/26651389/113584397-3a2b9300-9601-11eb-8229-8e221a1e75b8.png)
   </a>
 
   <h3 align="center">MusicAPI</h3>
@@ -54,7 +54,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![image](https://user-images.githubusercontent.com/26651389/113580144-a6a39380-95fb-11eb-9e59-c29432776326.png)
+![image](https://user-images.githubusercontent.com/26651389/113584075-d3a67500-9600-11eb-9654-24a454fdd31c.png)
+
 
 This project was built as a second step towards learning and demistifying how the Backend works behind the curtains in a RESTful architecture. This API only accepts GET and POST requests and has no authentication, so everyone that comes across this, can simply test it's usability and get a better understanding of the RESTful infrastructure.
 Well, as I said, the API only accepts GET and POST methods, so it's just a CR of a CRUD application. The reason: I don't want people deleting and updating the data that's already been added.
@@ -72,7 +73,7 @@ Here's why:
 This project was built using the following technologies
 * [C# language](https://docs.microsoft.com/pt-br/dotnet/csharp/)
 * [.NET 5.0](https://dotnet.microsoft.com/download/dotnet/5.0)
-* [Laravel](https://laravel.com)
+
 
 
 
@@ -94,6 +95,7 @@ If you want to reproduce this application, learn how it was coded and take it fu
    git clone https://github.com/luizfelipers19/musicAPI.git
    ```
 3. Install all these dependencies and packages through NuGet Package Manager
+
 ![image](https://user-images.githubusercontent.com/26651389/113583001-752cc700-95ff-11eb-8106-a8970bd10aaf.png)
    
 4. Create the localDB by typing the commands:

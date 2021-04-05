@@ -3,7 +3,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/luizfelipers19/musicAPI/">
-    ![music-954-675557](https://user-images.githubusercontent.com/26651389/113584397-3a2b9300-9601-11eb-8229-8e221a1e75b8.png)
+    <img src="https://cdn.iconscout.com/icon/free/png-256/music-954-675557.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">MusicAPI</h3>

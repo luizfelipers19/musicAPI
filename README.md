@@ -116,7 +116,37 @@ This section introduces the application usage steps. For this, I'm using Swagger
 As I've already mentioned. This application only accepts GET(read methods) and POST(create methods) Methods.
 
 ### Project structure
-This project is organized in 3 Model Classes: Artists, Albums and Classes. 
+This project is organized in 3 Model Classes: Artists, Albums and Classes. Each one of this classes has it's own properties, but the main Workflow to add stuff into this application is firstly adding an Artist, then the Album related to this Artist, and finally the songs that belong to the artist's album. I'd recommend using Postman to send the requests to the API. Don't forget to use the root URL:  https://musicrestfulapi.azurewebsites.net/ + the method url
+
+Swagger online documentation:
+
+#### Artists
+POST: inside Postman, send a POST request with a form-data structure, containing the Name, Gender and an Image file (image file needs to be lighter than 100kb).
+
+![artistPost](https://user-images.githubusercontent.com/26651389/113605890-aa481200-961d-11eb-9649-e52660f6f896.png)
+
+GET methods: You can use all these GET Methods to fetch data from the Artists model class.
+
+![image](https://user-images.githubusercontent.com/26651389/113606322-3bb78400-961e-11eb-826d-6067d1c334bc.png)
+
+
+
+#### Albums
+POST: inside Postman, send a POST request with a form-data structure, containing the Name, an Image file (image file needs to be lighter than 100kb) and the ArtistId (you need to know the Id of the artist you registered in the application, because it works as a foreign Key). The "Songs" property is a collection that stores all songs of this album, it works as a Foreign key and you don't need to use this property in your request.
+
+![albumsPost](https://user-images.githubusercontent.com/26651389/113606567-9355ef80-961e-11eb-8b74-a1d7d6cdfb37.png)
+
+GET methods: You can use all these GET Methods to fetch data from the Albums model class.
+
+![albumsGET](https://user-images.githubusercontent.com/26651389/113607185-4c1c2e80-961f-11eb-9191-2f2bc968ef09.png)
+#### Songs
+POST: inside Postman, send a POST request with a form-data structure, containing the Title, Duration, IsFeatured, an Image (file needs to be lighter than 100kb), the SongUrl (the url links are simply the youtube links to the song), ArtistId (You need to know the Id of the artist this song belongs to) and the AlbumId(you need to know the Id of the album this song is contained).
+
+![songsPost](https://user-images.githubusercontent.com/26651389/113607681-e11f2780-961f-11eb-9db2-197f3a086260.png)
+
+GET: You can use all these GET Methods to fetch data from the Songs model class.
+![songsGet](https://user-images.githubusercontent.com/26651389/113607870-22afd280-9620-11eb-95d3-260215ae3aee.png)
+
 
 
 

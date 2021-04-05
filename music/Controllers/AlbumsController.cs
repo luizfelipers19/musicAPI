@@ -40,8 +40,12 @@ namespace music.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAlbums()
+        public async Task<IActionResult> GetAlbums(int? pageNumber, int? pageSize)
         {
+            //setting default values if no value is passed as parameter to pageNumber and pageSize
+            int currentPageNumber = pageNumber ?? 1;
+            int currentPageSize = pageSize ?? 5;
+
             var albums = await (from album in _dbContext.Albums
                                 select new
                                 {
@@ -49,8 +53,8 @@ namespace music.Controllers
                                     Name = album.Name,
                                     ImageUrl = album.ImageUrl
                                 }).ToListAsync();
-
-            return Ok(albums);
+            //returns the results, paginated to the parameters passed in the url
+            return Ok(albums.Skip((currentPageNumber - 1) * currentPageSize).Take(currentPageSize));
         }
 
         [HttpGet("[action]")]

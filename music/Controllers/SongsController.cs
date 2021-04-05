@@ -61,8 +61,10 @@ namespace music.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult>  GetAllSongs()
+        public async Task<IActionResult>  GetAllSongs(int? pageNumber, int? pageSize)
         {
+            int currentPageNumber = pageNumber ?? 1;
+            int currentPageSize = pageSize ?? 10;
 
             var songs = await (from song in _dbContext.Songs
                               select new
@@ -73,7 +75,8 @@ namespace music.Controllers
                                   Image = song.ImageUrl,
                                   AvailableAt = song.SongUrl
                               }).ToListAsync();
-            return Ok(songs);
+            //skip and take algorithm for pagination 
+            return Ok(songs.Skip((currentPageNumber - 1) * currentPageSize).Take(currentPageSize));
         }
 
         // GET api/<SongsController>/5

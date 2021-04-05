@@ -40,8 +40,12 @@ namespace music.Controllers
         //get all artists details
         //api/artists
         [HttpGet]
-        public async Task<IActionResult> GetArtists()
+        public async Task<IActionResult> GetArtists(int? pageNumber, int? pageSize)
         {
+            //if pageNumber or pageSize parameters are not defined, set them as a default value
+            int currentPageNumber = pageNumber ?? 1;
+            int currentPageSize = pageSize ?? 5;
+
            var artists = await (from artist in _dbContext.Artists
             select new
             {
@@ -50,7 +54,8 @@ namespace music.Controllers
                 Image = artist.ImageUrl
             }).ToListAsync();
 
-            return Ok(artists);
+            //adding paginationo to the results, depending on the value passed as a parameter
+            return Ok(artists.Skip((currentPageNumber - 1) * currentPageSize).Take(currentPageSize));
         }
 
         //get single artist detail

@@ -111,6 +111,8 @@ If you want to reproduce this application, learn how it was coded and take it fu
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+#### First I would like to state that the Connection Strings and ContainersNames were used as placeholders for this project, and were already updated in the deployed version. You can try using those credentials, but they are no longer available, as I've generated new ones to the definitive version.
+
 This section introduces the application usage steps. For this, I'm using Swagger documentation printscreens. To use the application, you don't need to install it, because it runs inside Microsoft Azure servers and it's currently online.
 
 As I've already mentioned. This application only accepts GET(read methods) and POST(create methods) Methods.

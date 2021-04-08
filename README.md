@@ -65,7 +65,7 @@ Here's why:
 * Applications nowadays are split up in 2 or more sides, but mainly into the FrontEnd side and the Backend side. With this repo you can get a first step in understanding the Backend side by making simple requests to the API.
 * The API was deployed to Microsoft Azure servers, and will be available to everyone to send requests.
 
-#### My only request to everyone that finds this is to not bomb the API with requests!! This was built with love and it shouldn't be taken away.
+#### My only request to everyone that finds this is not to bomb the API with requests!! This was built with love and it shouldn't be taken away.
 
 
 ### Built With
@@ -111,7 +111,7 @@ If you want to reproduce this application, learn how it was coded and take it fu
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-#### First I would like to state that the Connection Strings and ContainersNames were used as placeholders for this project, and were already updated in the deployed version. You can try using those credentials, but they are no longer available, as I've generated new ones to the definitive version.
+#### First I would like to state that the Connection Strings and ContainersNames were used as placeholders for this project, and are already updated in the deployed version. You can try using those credentials, but they are no longer available, as I've generated new ones to the definitive version.
 
 This section introduces the application usage steps. For this, I'm using Swagger documentation printscreens. To use the application, you don't need to install it, because it runs inside Microsoft Azure servers and it's currently online.
 
